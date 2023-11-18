@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background: antiquewhite;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.todo {
+	width: 100%;
+	max-width: 540px;
+	background: #fff;
+	margin: 6rem auto 1.25rem;
+	padding: 3rem 2rem 4rem;
+	border-radius: 0.625rem;
+}
+
+.todo h2 {
+	color: #000;
+  font-weight: bold;
+  /*text-align: center;*/
+  background: #fff;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+	margin-bottom: 1.25rem;
+}
+
+#todoLogo {
+	/*display: flex;
+	align-items: center;
+  justify-content: center;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#todoInput {
+  flex: 1;
+  height: 2rem;
+  background: #000;
+  color: #fff; 
+  font-weight: bold;
+  padding: .5rem;
+  margin: .5rem;
+  text-align: center;
+}
+
+button {
+  height: 2rem;
+  width: 4rem;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1rem;
+  padding: .75rem .5rem .75rem 3rem;
+  user-select: none;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  position: relative;
+}
+
+ul li::before {
+	content: '';
+	position: absolute;
+	height: 1.75rem;
+	width: 1.75rem;
+	border-radius: 50%;
+	background-image: url("../images/unchecked.png");
+  background-size: cover;
+  background-position: center;
+  top: .75rem;
+  left: .5rem;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url("../images/checked.png");
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 0.325rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.3625rem;
+  color: #555;
+  line-height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #FF0000;
+}
